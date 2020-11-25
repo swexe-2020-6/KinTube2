@@ -1,3 +1,10 @@
 <% @images.each do |image| %>
-    <p><%= image.title %></p>
+    <p>
+        <%= image.title %>
+        <%= image_tag "/get_image/#{image.id}" %>
+        <%= link_to '削除', "/images/#{image.id}", method: :delete %>
+        <%= link_to '編集', "/images/#{image.id}/edit" %>
+        </p>
 <% end %>
+
+<%= link_to '新規追加', '/images/new' %>

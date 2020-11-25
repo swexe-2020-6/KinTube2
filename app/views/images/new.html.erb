@@ -1,0 +1,13 @@
+<%= form_for @image, url:{action: :create} do |f| %>
+<p>
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :file, 'ファイル' %>
+    <%= f.file_field :file %>
+</p>
+
+    <%= f.submit '登録' %>
+    <% end %>
